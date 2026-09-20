@@ -4,11 +4,11 @@ using UnityEngine.InputSystem;
 public class SpikesMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
-    [SerializeField] float baseVelocity = 10;
-    [SerializeField] float velocity;
-    [SerializeField] float limits;
+    [SerializeField] private float baseVelocity = 10;
+    [SerializeField] private float velocity;
+    [SerializeField] private float limits;
 
-    void Start()
+    private void Start()
     {
         velocity = baseVelocity;
         rb.linearVelocityX = velocity;
