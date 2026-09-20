@@ -717,10 +717,7 @@ MonoBehaviour:
   floorLayer:
     serializedVersion: 2
     m_Bits: 64
-  jumpForce: 10
-  originalGravityScale: 1
-  jumpGravityScale: 0.5
-  rayCastLong: 0.8
+  data: {fileID: 11400000, guid: 389a61a40a0c7bf48bf8d51d760c9719, type: 2}
   rb: {fileID: 1725895630}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

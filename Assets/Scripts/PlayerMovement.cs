@@ -3,18 +3,24 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private LayerMask floorLayer;
-    
+    [SerializeField] private PlayerDataSo data;
+
     private bool isPressingUp = false;
     private bool isTappetUp = false;
     private bool inFloor = false;
-    [SerializeField] private float jumpForce = 10;
-    [SerializeField] private float originalGravityScale = 3;
-    [SerializeField] private float jumpGravityScale = 1f;
-    [SerializeField] private float rayCastLong = 2.2f;
+    private float jumpForce;
+    private float originalGravityScale;
+    private float jumpGravityScale;
+    private float rayCastLong;
     public Rigidbody2D rb;
 
     private void Start()
     {
+        jumpForce = data.jumpForce;
+        originalGravityScale = data.originalGravityScale;
+        jumpGravityScale = data.jumpGravityScale;
+        rayCastLong = data.rayCastLong;
+
         rb.gravityScale = originalGravityScale;
     }
 
@@ -31,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(data.jumpKey))
         {
             isPressingUp = true;
             isTappetUp = true;
