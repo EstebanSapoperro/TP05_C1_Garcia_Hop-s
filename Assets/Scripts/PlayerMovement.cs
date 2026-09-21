@@ -5,6 +5,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask floorLayer;
     [SerializeField] private PlayerDataSo data;
 
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject scorePanel;
+
     private bool isPressingUp = false;
     private bool isPressingDown = false;
     private bool isTappetUp = false;
@@ -31,7 +34,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (collisionedOther != null) 
         {
-            Debug.Log("hola, se coliciono con el spike");
+            DataGameManager.isFinished = true;
+            Time.timeScale = 0;
+            gameOverPanel.SetActive(true);
+            scorePanel.SetActive(false);
         }
 
     }

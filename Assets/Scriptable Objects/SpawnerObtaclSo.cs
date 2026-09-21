@@ -7,5 +7,6 @@ public class SpawnerObtaclSo : ScriptableObject
     public float lifeObtalcTime = 8;
     public float minSpawnTime = 2;
     public float maxSpawnTime = 4;
-    
+    public float spikeSpeed = -5;
+
 }

@@ -27,6 +27,7 @@ public class ObstaclSpawner : MonoBehaviour
         DataGameManager.actualMinHeigt = data.minHeigt;
         DataGameManager.actualMaxSpawnTime = data.maxSpawnTime;
         DataGameManager.actualMinSpawnTime = data.minSpawnTime;
+        DataGameManager.actualSpikeSpeed = data.spikeSpeed;
 
     }
 

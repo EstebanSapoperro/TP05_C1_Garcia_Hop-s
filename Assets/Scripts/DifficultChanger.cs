@@ -9,12 +9,14 @@ public class DifficultChanger : MonoBehaviour
     private float difficultSpawnMulty;
     private float difficultSpeedMulty;
 
+    private float maxSpawnTime;
+    private float minSpawnTime;
+
     private void Start()
     {
         baseCooldownDifficultMulty = data.baseCooldownDifficultMulty;
         difficultSpawnMulty = data.difficultSpawnMulty;
         difficultSpeedMulty = data.difficultSpeedMulty;
-
     }
 
     private void Update()

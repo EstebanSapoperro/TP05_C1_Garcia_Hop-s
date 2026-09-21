@@ -17,3 +17,4 @@ MonoBehaviour:
   lifeObtalcTime: 8
   minSpawnTime: 2
   maxSpawnTime: 4
+  spikeSpeed: -5
