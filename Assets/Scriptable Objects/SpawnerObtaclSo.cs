@@ -1,16 +1,11 @@
 using UnityEngine;
-
-public class SpawnerObtaclSo : MonoBehaviour
+[CreateAssetMenu(fileName = "SpawnerData", menuName = "Game/Data/Spawner")]
+public class SpawnerObtaclSo : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float minHeigt = -4;
+    public float maxHeigt = -2;
+    public float lifeObtalcTime = 8;
+    public float minSpawnTime = 2;
+    public float maxSpawnTime = 4;
+    
 }

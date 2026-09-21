@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerDataSo data;
 
     private bool isPressingUp = false;
+    private bool isPressingDown = false;
     private bool isTappetUp = false;
     private bool inFloor = false;
     private float jumpForce;
@@ -48,6 +49,15 @@ public class PlayerMovement : MonoBehaviour
             isTappetUp = false;
         }
 
+        if (Input.GetKey(data.downKey))
+        {
+            isPressingDown = true;
+        }
+        else 
+        {
+            isPressingDown = false;
+        }
+
         RaycastHit2D hit = Physics2D.Raycast(transform.localPosition, Vector2.down, rayCastLong, floorLayer);
         inFloor = hit.collider != null;
     }
@@ -67,11 +77,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocityY = jumpForce;
         }
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * rayCastLong);
+
+        if ((isPressingDown)) 
+        {
+            rb.linearVelocityY = data.downForce;
+        }
     }
 
 }

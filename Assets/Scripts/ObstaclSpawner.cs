@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class ObstaclSpawner : MonoBehaviour
 {
-    [SerializeField] private float baseMinSpawnTime = 2;
-    [SerializeField] private float baseMaxSpawnTime = 4;
-    public GameObject obtacl;
-
+    [SerializeField] SpawnerObtaclSo data;
+    public GameObject obtaclPrefab;
     private Vector3 spawnPosition;
     private float minHeigt;
     private float maxHeigt;
@@ -16,16 +14,23 @@ public class ObstaclSpawner : MonoBehaviour
 
     void Start()
     {
-        minHeigt = -4;
-        maxHeigt = -2;
-        lifeObtalcTime = 8;
+
+        minHeigt = data.minHeigt;
+        maxHeigt = data.maxHeigt;
+        lifeObtalcTime = data.lifeObtalcTime;
         spawnPosition = new Vector3(11, Random.Range(minHeigt, maxHeigt), 0);
-        minSpawnTime = baseMinSpawnTime;
-        maxSpawnTime = baseMaxSpawnTime;
+        minSpawnTime = data.minSpawnTime;
+        maxSpawnTime = data.maxSpawnTime;
         coolDown = Random.Range(minSpawnTime, maxSpawnTime);
+
+        DataGameManager.actualMaxHeigt = data.maxHeigt;
+        DataGameManager.actualMinHeigt = data.minHeigt;
+        DataGameManager.actualMaxSpawnTime = data.maxSpawnTime;
+        DataGameManager.actualMinSpawnTime = data.minSpawnTime;
+
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         coolDown -= Time.deltaTime;
         if (coolDown < 0) 
@@ -37,8 +42,8 @@ public class ObstaclSpawner : MonoBehaviour
     private void SpawnObtacle() 
     {
         spawnPosition = new Vector3(11, Random.Range(minHeigt, maxHeigt), 0);
-        coolDown = Random.Range(minSpawnTime, maxSpawnTime);
-        GameObject o = Instantiate(obtacl ,spawnPosition, Quaternion.identity);
+        coolDown = Random.Range(DataGameManager.actualMinSpawnTime, DataGameManager.actualMaxSpawnTime);
+        GameObject o = Instantiate(obtaclPrefab ,spawnPosition, Quaternion.identity);
         Destroy(o, lifeObtalcTime);
     }
 }
