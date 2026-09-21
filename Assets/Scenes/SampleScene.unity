@@ -478,6 +478,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1161329606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1161329607}
+  m_Layer: 0
+  m_Name: Obstacl Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1161329607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161329606}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.4037, y: -4.1491, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1443695521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -492,11 +523,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7104940427805430169, guid: 3672cfb8993aa784dae8de5d8a6eea72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.621412
+      value: 11.62
       objectReference: {fileID: 0}
     - target: {fileID: 7104940427805430169, guid: 3672cfb8993aa784dae8de5d8a6eea72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5189786
+      value: -3.87
       objectReference: {fileID: 0}
     - target: {fileID: 7104940427805430169, guid: 3672cfb8993aa784dae8de5d8a6eea72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -728,3 +759,4 @@ SceneRoots:
   - {fileID: 1725895629}
   - {fileID: 936505705}
   - {fileID: 1443695521}
+  - {fileID: 1161329607}

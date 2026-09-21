@@ -15,5 +15,5 @@ MonoBehaviour:
   jumpForce: 10
   originalGravityScale: 3
   jumpGravityScale: 1
-  rayCastLong: 2.2
+  rayCastLong: 0.8
   jumpKey: 119
