@@ -8,13 +8,8 @@ public class ClickSound : MonoBehaviour
 
     private void Awake()
     {
-        buttonSelected.onClick.AddListener(OnClick);
-        source = GetComponent<AudioSource>();
+
     }
 
-    private void OnClick() 
-    {
-        source.Play();
-    }
 
 }
