@@ -44,7 +44,6 @@ public class EnterBackButton : MonoBehaviour
         {
             enterPanel.SetActive(true);
         }
-
         exitPanel.SetActive(false);
 
     }

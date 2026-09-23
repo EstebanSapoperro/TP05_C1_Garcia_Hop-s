@@ -9,6 +9,8 @@ public class SoundSliderSetting : MonoBehaviour
     [SerializeField] Slider sFXAudioSlider;
     [SerializeField] Slider musicAudioSlider;
     [SerializeField] AudioMixer mixerSelected;
+    [SerializeField] AudioSource sliderSound;
+    [SerializeField] AudioClip soundEffect;
 
     private void Awake()
     {
@@ -48,5 +50,7 @@ public class SoundSliderSetting : MonoBehaviour
     {
         float finalSound = Mathf.Clamp(Mathf.Log10(value) * 35, -80, 0);
         mixerSelected.SetFloat(sound, finalSound);
+
+        sliderSound.PlayOneShot(soundEffect);
     }
 }
