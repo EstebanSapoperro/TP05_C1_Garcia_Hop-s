@@ -25,6 +25,7 @@ public class PlayExitButton : MonoBehaviour
     {
         if (mainMenuButton)
         {
+            DataGameManager.isFinished = false;
             Time.timeScale = 0.0f;
             SceneManager.LoadScene("MainMenu");
         }

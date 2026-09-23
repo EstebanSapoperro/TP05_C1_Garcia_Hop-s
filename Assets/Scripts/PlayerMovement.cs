@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask floorLayer;
     [SerializeField] private PlayerDataSo data;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource music;
+    [SerializeField] private AudioSource jumpEffect;
 
 
     [SerializeField] private GameObject gameOverPanel;
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collisionedOther != null) 
         {
+            music.Stop();
             DataGameManager.isFinished = true;
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
@@ -84,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((isTappetUp) && (inFloor)) 
         {
+            jumpEffect.Play();
             rb.linearVelocityY = jumpForce;
         }
 
