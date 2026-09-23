@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask floorLayer;
     [SerializeField] private PlayerDataSo data;
 
+
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject scorePanel;
 

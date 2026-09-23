@@ -32,8 +32,15 @@ public class DifficultChanger : MonoBehaviour
     private void DifficultUp() 
     {
         cooldownDifficultMulty += baseCooldownDifficultMulty;
-        DataGameManager.actualMaxSpawnTime -= (float)difficultSpawnMulty;
-        DataGameManager.actualMinSpawnTime -= (float)difficultSpawnMulty;
+        if (DataGameManager.actualMaxSpawnTime > data.maxMaxdifficultSpawnMulty) 
+        {
+            DataGameManager.actualMaxSpawnTime -= (float)difficultSpawnMulty;
+        }
+
+        if (DataGameManager.actualMinSpawnTime > data.maxMinDifficultSpawnMulty)
+        {
+            DataGameManager.actualMinSpawnTime -= (float)difficultSpawnMulty;
+        }
         DataGameManager.actualSpikeSpeed -= (float)difficultSpeedMulty;
     }
 

@@ -18,8 +18,7 @@ public class RetryButton : MonoBehaviour
 
     private void onClick() 
     {
-
-
+        DataGameManager.isFinished = false;
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("SampleScene");
     }
