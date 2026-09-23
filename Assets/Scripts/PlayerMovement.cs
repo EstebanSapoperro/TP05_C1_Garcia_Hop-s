@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private LayerMask floorLayer;
     [SerializeField] private PlayerDataSo data;
+    [SerializeField] private Animator animator;
 
 
     [SerializeField] private GameObject gameOverPanel;
@@ -67,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.localPosition, Vector2.down, rayCastLong, floorLayer);
         inFloor = hit.collider != null;
+        animator.SetBool("IsInGround", inFloor);
     }
 
     private void FixedUpdate()
