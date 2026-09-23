@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e269616d7bd9de34c97c3c35df6ad88a, type: 3}
   m_Name: ParalaxData1
   m_EditorClassIdentifier: Assembly-CSharp::ParalaxSo
-  velocity: 2
+  velocity: 0.18
   limits: -17.6
   relocation: 31.6
