@@ -50,5 +50,11 @@ TagManager:
   - name: FrontGround
     uniqueID: 4022860309
     locked: 0
+  - name: Player
+    uniqueID: 3476026911
+    locked: 0
+  - name: obtacl
+    uniqueID: 2574113813
+    locked: 0
   m_RenderingLayers:
   - Default
