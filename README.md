@@ -45,6 +45,10 @@ La música y los efectos de sonido utilizados en el juego fueron obtenidos de **
 
 https://pixabay.com
 
+## Itch io
+
+https://sapoperrog.itch.io/hops
+
 
 ## Licencias
 
